@@ -1,11 +1,13 @@
+/**U10111033, Computer science 4, Hsueh_Hsin Lu*/
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
 public class MoveMessageDemo extends JFrame {
-	// Create a MovableMessagePanel instance for moving a message
-	MovableMessagePanel p1 = new MovableMessagePanel();
+	// Create a MessagePane instance for moving a message
+	MessagePane p1 = new MessagePane();
 	
 	public MoveMessageDemo() {
 		//Both javax.swing and java.util has Timer, so we assign it to javax.swing.Timer
@@ -35,8 +37,8 @@ public class MoveMessageDemo extends JFrame {
 		frame.setVisible(true);
 	}
 
-	// Inner class: MovableMessagePanel draws a message
-	static class MovableMessagePanel extends JPanel {
+	// Inner class: MessagePane draws a message
+	static class MessagePane extends JPanel {
 		private String message1 = "Java is fun";
 		private String message2 = "Java is powerful";
 		//defult is 70, 70
@@ -53,7 +55,7 @@ public class MoveMessageDemo extends JFrame {
 		}
 		
 		/** Construct a panel to draw string s */
-		public MovableMessagePanel() {
+		public MessagePane() {
 			addMouseMotionListener(new MouseMotionListener() {
 					@Override /** Handle mouse-dragged event */
 					public void mouseDragged(MouseEvent e) {
